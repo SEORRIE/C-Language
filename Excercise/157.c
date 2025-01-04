@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int sort(int n)
+int sort(int a, int b)
 {
-    if (n == 1) return 1;
-    else return sort(n-1);
+    if (a >= b) {
+        printf("%d ", b);
+        return sort(a, b + 1);
+    }
 }
-
 int main()
 {
-    printf("%d\n", sort(4));
+    int i;
+    scanf("%d", &i);
+    sort(i, 1);
+    return 0;
 }
